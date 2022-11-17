@@ -1,27 +1,27 @@
 /*!
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {expect} from 'chai';
+const {expect} = require('chai');
 
-import jsigs from 'jsonld-signatures';
+const jsigs = require('jsonld-signatures');
 const {purposes: {AssertionProofPurpose}} = jsigs;
 
-import {
+const {
   Ed25519VerificationKey2020
-} from '@digitalbazaar/ed25519-verification-key-2020';
+} = require('@digitalbazaar/ed25519-verification-key-2020');
 
-import {
+const {
   controllerDoc2018,
   credential,
   mockKeyPair2018,
   mockKeyPair2020,
   mockPublicKey2018
-} from './mock-data.js';
-import {Ed25519Signature2020, suiteContext} from '../lib/index.js';
-import {
+} = require('./mock-data.js');
+const {Ed25519Signature2020, suiteContext} = require('../lib/index.js');
+const {
   Ed25519VerificationKey2018
-} from '@digitalbazaar/ed25519-verification-key-2018';
-import {loader} from './documentLoader.js';
+} = require('@digitalbazaar/ed25519-verification-key-2018');
+const {loader} = require('./documentLoader.js');
 
 const documentLoader = loader.build();
 

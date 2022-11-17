@@ -1,9 +1,9 @@
 /*!
  * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
  */
-export const controller = 'https://example.edu/issuers/565049';
+const controller = 'https://example.edu/issuers/565049';
 
-export const mockPublicKey2020 = {
+const mockPublicKey2020 = {
   '@context': 'https://w3id.org/security/suites/ed25519-2020/v1',
   type: 'Ed25519VerificationKey2020',
   controller,
@@ -11,7 +11,7 @@ export const mockPublicKey2020 = {
   publicKeyMultibase: 'z6MknCCLeeHBUaHu4aHSVLDCYQW9gjVJ7a63FpMvtuVMy53T'
 };
 
-export const mockPublicKey2018 = {
+const mockPublicKey2018 = {
   '@context': 'https://w3id.org/security/suites/ed25519-2018/v1',
   type: 'Ed25519VerificationKey2018',
   controller,
@@ -19,7 +19,7 @@ export const mockPublicKey2018 = {
   publicKeyBase58: 'DggG1kT5JEFwTC6RJTsT6VQPgCz1qszCkX5Lv4nun98x'
 };
 
-export const mockKeyPair2020 = {
+const mockKeyPair2020 = {
   type: 'Ed25519VerificationKey2020',
   controller,
   id: controller + '#z6MknCCLeeHBUaHu4aHSVLDCYQW9gjVJ7a63FpMvtuVMy53T',
@@ -28,7 +28,7 @@ export const mockKeyPair2020 = {
     'W6LH7heQCNYQCuoKaDwvv2qCWz3uBzG2xesqmf'
 };
 
-export const mockKeyPair2018 = {
+const mockKeyPair2018 = {
   type: 'Ed25519VerificationKey2018',
   controller,
   id: controller + '#z6MkumafR1duPR5FZgbVu8nzX3VyhULoXNpq9rpjhfaiMQmx',
@@ -37,7 +37,7 @@ export const mockKeyPair2018 = {
     'wwvQeuqbM2dNwS9RCf6buUJGu6N3rBy6oLSpMwha8tc'
 };
 
-export const controllerDoc2020 = {
+const controllerDoc2020 = {
   '@context': [
     'https://www.w3.org/ns/did/v1',
     'https://w3id.org/security/suites/ed25519-2020/v1'
@@ -46,7 +46,7 @@ export const controllerDoc2020 = {
   assertionMethod: [mockPublicKey2020]
 };
 
-export const controllerDoc2018 = {
+const controllerDoc2018 = {
   '@context': [
     'https://www.w3.org/ns/did/v1',
     'https://w3id.org/security/suites/ed25519-2018/v1'
@@ -55,7 +55,7 @@ export const controllerDoc2018 = {
   assertionMethod: [mockPublicKey2018]
 };
 
-export const credential = {
+const credential = {
   '@context': [
     'https://www.w3.org/2018/credentials/v1',
     {
@@ -73,3 +73,14 @@ export const credential = {
     alumniOf: 'Example University'
   }
 };
+
+module.exports={
+  controller,
+  mockPublicKey2020,
+  mockPublicKey2018,
+  mockKeyPair2020,
+  mockKeyPair2018,
+  controllerDoc2020,
+  controllerDoc2018,
+  credential
+}
